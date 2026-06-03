@@ -5,24 +5,39 @@ import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 export default function AboutPage() {
   return (
     <EditableSiteShell>
-      <main className="bg-[var(--editable-page-bg,#fffaf3)] px-4 py-14 text-[var(--editable-page-text,#241915)] sm:px-6 lg:px-8">
-        <section className="mx-auto grid max-w-[var(--editable-container)] gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <article className="rounded-[2.5rem] border border-[var(--editable-border)] bg-white/80 p-8 shadow-sm lg:p-12">
-            <p className="text-xs font-black uppercase tracking-[0.24em] opacity-55">{pagesContent.about.badge}</p>
-            <h1 className="mt-5 text-5xl font-black tracking-[-0.07em]">About {SITE_CONFIG.name}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 opacity-70">{pagesContent.about.description}</p>
-            <div className="mt-8 space-y-4 text-sm leading-8 opacity-75">
-              {pagesContent.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      <main className="bg-[var(--slot4-page-bg)]">
+        <section className="bg-[#171c17] text-[var(--slot4-dark-text)]">
+          <div className="mx-auto grid max-w-[var(--slot4-container)] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-16">
+            <article className="rounded-[var(--slot4-radius-xl)] border border-white/10 bg-white/6 p-6 backdrop-blur-xl sm:p-8 lg:p-10">
+              <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[var(--slot4-accent)]">{pagesContent.about.badge}</p>
+              <h1 className="mt-5 font-serif text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-white sm:text-6xl">About {SITE_CONFIG.name}</h1>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-white/72">{pagesContent.about.description}</p>
+            </article>
+            <div className="rounded-[var(--slot4-radius-lg)] border border-white/10 bg-[#fffdf6] p-6 text-[var(--slot4-page-text)] shadow-[var(--slot4-shadow-strong)] sm:p-8">
+              <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--slot4-muted-text)]">A more refined structure</p>
+              <p className="mt-4 text-sm leading-8 text-[var(--slot4-soft-muted-text)]">
+                The site is built to feel collected, comfortable, and visually distinct while still keeping every route and data flow working exactly as before.
+              </p>
             </div>
-          </article>
-          <aside className="space-y-4">
-            {pagesContent.about.values.map((value) => (
-              <div key={value.title} className="rounded-[2rem] border border-[var(--editable-border)] bg-white/70 p-6 shadow-sm">
-                <h2 className="text-xl font-black tracking-[-0.04em]">{value.title}</h2>
-                <p className="mt-3 text-sm leading-7 opacity-70">{value.description}</p>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[var(--slot4-container)] px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
+            <article className="rounded-[var(--slot4-radius-xl)] border border-[var(--slot4-border)] bg-white/72 p-6 shadow-[var(--slot4-shadow)] sm:p-8">
+              <div className="space-y-4 text-sm leading-8 text-[var(--slot4-soft-muted-text)]">
+                {pagesContent.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-            ))}
-          </aside>
+            </article>
+            <aside className="grid gap-4">
+              {pagesContent.about.values.map((value, index) => (
+                <div key={value.title} className={`rounded-[var(--slot4-radius-lg)] border p-6 shadow-[var(--slot4-shadow)] ${index === 1 ? 'border-[#171c17] bg-[#171c17] text-[var(--slot4-dark-text)]' : 'border-[var(--slot4-border)] bg-white/72 text-[var(--slot4-page-text)]'}`}>
+                  <h2 className="font-serif text-2xl font-semibold tracking-[-0.03em]">{value.title}</h2>
+                  <p className={`mt-3 text-sm leading-7 ${index === 1 ? 'text-white/72' : 'text-[var(--slot4-soft-muted-text)]'}`}>{value.description}</p>
+                </div>
+              ))}
+            </aside>
+          </div>
         </section>
       </main>
     </EditableSiteShell>
