@@ -1,14 +1,13 @@
-# Slot 4 Editable Manifest
+# Editable Manifest
 
-Slot 4 is now a reference-ready editable UI architecture.
+This folder contains the presentation layer for the editable site experience.
 
 ## Contract
 
-- `src/app/**` is route wiring only.
-- `src/lib/**`, `src/config/**`, and APIs are data/SEO/routing logic only.
-- All visible UI should live inside `src/editable/**`.
-- Navbar, footer, body shell, page layouts, task archives, task details, cards, sections, theme, and copy are editable.
-- Normal UI PRs must only change `src/editable/**`.
+- Edit only `src/editable/**` for UI redesign work.
+- Keep route wiring, SEO, APIs, and data-fetching logic outside this folder untouched.
+- Preserve exported component/function names and prop compatibility.
+- Make posts render safely even when optional fields such as image, summary, category, or contact details are missing.
 
 ## Editable Surface
 
@@ -16,24 +15,34 @@ Slot 4 is now a reference-ready editable UI architecture.
 src/editable/shell/EditableSiteShell.tsx
 src/editable/shell/EditableNavbar.tsx
 src/editable/shell/EditableFooter.tsx
-src/editable/pages/HomePage.tsx
-src/editable/pages/LoginPage.tsx
-src/editable/pages/SignupPage.tsx
-src/editable/pages/TaskArchivePage.tsx
-src/editable/pages/TaskDetailPage.tsx
-src/editable/pages/*Page.tsx
-src/editable/cards/PostCards.tsx
+src/editable/shell/EditableReaderNavbar.tsx
+src/editable/pages/*.tsx
+src/editable/cards/*.tsx
 src/editable/sections/*.tsx
+src/editable/components/*.tsx
 src/editable/content/*.ts
 src/editable/theme/*.ts
 src/editable/theme/editable-global.css
 ```
 
-## AI Redesign Rule
+## Redesign Rule
 
-When giving this folder to AI, ask it to rewrite `src/editable/**` only. It may fully redesign body, nav, footer, page layout, cards, task pages, and detail pages. It must preserve exported component/function names and props.
+The editable surface may fully redesign:
 
-## Do Not Touch
+- body and background treatment
+- home layout and sections
+- archive and detail page layouts
+- card systems and content blocks
+- navbar, footer, forms, empty states, and loading states
+
+The editable surface must not change:
+
+- API behavior
+- routing structure
+- backend behavior
+- core data flow or post-fetching logic
+
+## Protected Areas
 
 ```txt
 src/app/**
@@ -44,10 +53,4 @@ src/components/**
 Dockerfile
 package.json
 next.config.*
-```
-
-For one-time base infrastructure changes only:
-
-```bash
-ALLOW_INFRASTRUCTURE_CHANGES=1 pnpm guard:editable
 ```

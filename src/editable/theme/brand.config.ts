@@ -12,12 +12,10 @@ export const slot4BrandConfig = {
   baseUrl: siteIdentity.url,
   productKind,
   ogImage: siteIdentity.ogImage,
-  accents:
-    productKind === 'visual'
-      ? { primary: '#8df0c8', surface: '#07101f' }
-      : productKind === 'editorial'
-        ? { primary: '#241711', surface: '#fbf6ee' }
-        : productKind === 'directory'
-          ? { primary: '#0f172a', surface: '#f8fbff' }
-          : { primary: '#5b2b3b', surface: '#f7f1ea' },
+  accents: {
+    primary: '#41431B',
+    secondary: '#AEB784',
+    surface: '#F8F3E1',
+    ink: '#1F2210',
+  },
 } as const
