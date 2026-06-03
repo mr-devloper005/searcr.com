@@ -1,112 +1,112 @@
 import { slot4BrandConfig } from './brand.config'
 
 export type Slot4VisualPreset =
-  | 'editorial-paper'
-  | 'luxury-atelier'
-  | 'brutalist-index'
-  | 'organic-journal'
-  | 'tech-directory'
-  | 'retro-bulletin'
-  | 'visual-gallery'
+  | 'classical-ledger'
+  | 'midnight-salon'
+  | 'linen-atlas'
+  | 'gallery-notes'
+  | 'directory-registry'
+  | 'paper-archive'
+  | 'private-library'
 
 export const visualPresets = {
-  'editorial-paper': {
-    label: 'Editorial Paper',
-    mood: 'calm magazine authority',
-    fontDirection: 'serif headlines with quiet sans body',
+  'classical-ledger': {
+    label: 'Classical Ledger',
+    mood: 'luxury editorial with old-world restraint',
+    fontDirection: 'serif headlines, refined sans body, uppercase labels',
     colors: {
-      background: '#f7efe3',
-      foreground: '#201711',
-      muted: '#7b6253',
-      primary: '#261811',
-      accent: '#b76e45',
-      surface: '#fffaf2',
+      background: '#f8f3e1',
+      foreground: '#1f2210',
+      muted: '#727652',
+      primary: '#41431b',
+      accent: '#aeb784',
+      surface: '#fffdf6',
     },
-    shape: 'soft editorial cards with fine borders',
+    shape: 'arched panels, oval badges, soft borders',
   },
-  'luxury-atelier': {
-    label: 'Luxury Atelier',
-    mood: 'premium, restrained, polished',
-    fontDirection: 'high-contrast display headings with spacious tracking',
+  'midnight-salon': {
+    label: 'Midnight Salon',
+    mood: 'dark luxury with luminous highlights',
+    fontDirection: 'display serif hero, polished compact body',
     colors: {
-      background: '#0f1110',
-      foreground: '#f6ead8',
-      muted: '#b8aa94',
-      primary: '#d7b56d',
-      accent: '#7f1d1d',
-      surface: '#181a17',
+      background: '#171c17',
+      foreground: '#f8f3e1',
+      muted: '#c2c7a6',
+      primary: '#f8f3e1',
+      accent: '#aeb784',
+      surface: '#202622',
     },
-    shape: 'large dark panels, gold hairlines, generous negative space',
+    shape: 'deep cards, glowing gradients, quiet glass',
   },
-  'brutalist-index': {
-    label: 'Brutalist Index',
-    mood: 'bold, raw, memorable',
-    fontDirection: 'condensed headings, mono labels, hard rhythm',
+  'linen-atlas': {
+    label: 'Linen Atlas',
+    mood: 'warm map-room clarity',
+    fontDirection: 'serif titles with disciplined information blocks',
     colors: {
-      background: '#f2f0e8',
-      foreground: '#111111',
-      muted: '#55524a',
-      primary: '#111111',
-      accent: '#ff4d00',
-      surface: '#ffffff',
-    },
-    shape: 'sharp edges, thick borders, offset blocks',
-  },
-  'organic-journal': {
-    label: 'Organic Journal',
-    mood: 'warm, natural, trustworthy',
-    fontDirection: 'rounded serif or humanist sans with soft captions',
-    colors: {
-      background: '#f4efe5',
-      foreground: '#263021',
-      muted: '#68705a',
-      primary: '#415b32',
-      accent: '#c47c51',
+      background: '#f5edd8',
+      foreground: '#24240f',
+      muted: '#6b6f4b',
+      primary: '#41431b',
+      accent: '#d0c69d',
       surface: '#fffaf0',
     },
-    shape: 'rounded cards, natural spacing, calm texture',
+    shape: 'document cards, section dividers, framed lists',
   },
-  'tech-directory': {
-    label: 'Tech Directory',
-    mood: 'clean, fast, useful',
-    fontDirection: 'modern sans with crisp mono data accents',
+  'gallery-notes': {
+    label: 'Gallery Notes',
+    mood: 'image-forward and atmospheric',
+    fontDirection: 'minimal labels with larger artful headlines',
     colors: {
-      background: '#f6f9fc',
-      foreground: '#101827',
-      muted: '#5f6b7a',
-      primary: '#0f172a',
-      accent: '#00a6ff',
-      surface: '#ffffff',
+      background: '#ece5cb',
+      foreground: '#1f2210',
+      muted: '#6f7353',
+      primary: '#41431b',
+      accent: '#aeb784',
+      surface: '#fffef8',
     },
-    shape: 'clean grids, pill filters, sharp information hierarchy',
+    shape: 'media blocks, layered captions, floating chips',
   },
-  'retro-bulletin': {
-    label: 'Retro Bulletin',
-    mood: 'playful, local, energetic',
-    fontDirection: 'chunky headings with friendly body type',
+  'directory-registry': {
+    label: 'Directory Registry',
+    mood: 'premium directory with practical order',
+    fontDirection: 'strong serif section titles and compact sans metadata',
     colors: {
-      background: '#fff3c4',
-      foreground: '#2b1d12',
-      muted: '#7b5736',
-      primary: '#2b1d12',
-      accent: '#e85d2a',
-      surface: '#fff8da',
+      background: '#f4ecd3',
+      foreground: '#232613',
+      muted: '#676b46',
+      primary: '#41431b',
+      accent: '#aeb784',
+      surface: '#fffef9',
     },
-    shape: 'stickers, tabs, framed modules, playful dividers',
+    shape: 'stacked ledgers, bordered rows, badges',
   },
-  'visual-gallery': {
-    label: 'Visual Gallery',
-    mood: 'cinematic, image-led, immersive',
-    fontDirection: 'minimal sans with oversized display moments',
+  'paper-archive': {
+    label: 'Paper Archive',
+    mood: 'quiet curated archive',
+    fontDirection: 'bookish serif titles with soft mono details',
     colors: {
-      background: '#07101f',
-      foreground: '#f8fbff',
-      muted: '#a9b6c8',
-      primary: '#8df0c8',
-      accent: '#f2a0ff',
-      surface: '#101b2d',
+      background: '#f8f3e1',
+      foreground: '#262813',
+      muted: '#747754',
+      primary: '#41431b',
+      accent: '#d8cfab',
+      surface: '#fffdf7',
     },
-    shape: 'dark cards, large media, glass overlays',
+    shape: 'paper stacks, inset panels, slim rules',
+  },
+  'private-library': {
+    label: 'Private Library',
+    mood: 'exclusive reading room elegance',
+    fontDirection: 'classical display with controlled supporting copy',
+    colors: {
+      background: '#1a1f18',
+      foreground: '#f8f3e1',
+      muted: '#c5caad',
+      primary: '#f8f3e1',
+      accent: '#aeb784',
+      surface: '#242b22',
+    },
+    shape: 'arched cards, dark paper, gilded separators',
   },
 } as const
 
@@ -114,36 +114,36 @@ export const visualSystem = {
   productKind: slot4BrandConfig.productKind,
   recommendedPreset:
     slot4BrandConfig.productKind === 'visual'
-      ? 'visual-gallery'
-      : slot4BrandConfig.productKind === 'editorial'
-        ? 'editorial-paper'
-        : slot4BrandConfig.productKind === 'directory'
-          ? 'tech-directory'
-          : 'organic-journal',
+      ? 'gallery-notes'
+      : slot4BrandConfig.productKind === 'directory'
+        ? 'directory-registry'
+        : slot4BrandConfig.productKind === 'editorial'
+          ? 'classical-ledger'
+          : 'private-library',
   radius: {
-    sm: '0.75rem',
-    md: '1.25rem',
-    lg: '2rem',
-    xl: '2.75rem',
+    sm: '1rem',
+    md: '1.5rem',
+    lg: '2.2rem',
+    xl: '2.8rem',
   },
   motion: {
     pageLoad: 'animate-in fade-in slide-in-from-bottom-4 duration-700',
     cardHover: 'transition duration-300 hover:-translate-y-1 hover:shadow-xl',
-    softHover: 'transition duration-300 hover:opacity-85',
+    softHover: 'transition duration-300 hover:opacity-90',
     reduceMotionSafe: 'motion-reduce:transform-none motion-reduce:transition-none',
   },
   typography: {
-    eyebrow: 'text-xs font-semibold uppercase tracking-[0.24em]',
-    heroTitle: 'text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl',
-    sectionTitle: 'text-3xl font-semibold tracking-[-0.04em] sm:text-4xl',
+    eyebrow: 'text-[11px] font-bold uppercase tracking-[0.28em]',
+    heroTitle: 'font-serif text-5xl font-semibold tracking-[-0.05em] sm:text-6xl lg:text-7xl',
+    sectionTitle: 'font-serif text-4xl font-semibold tracking-[-0.04em] sm:text-5xl',
     body: 'text-base leading-8',
-    caption: 'text-xs font-medium uppercase tracking-[0.18em]',
+    caption: 'text-[11px] font-bold uppercase tracking-[0.22em]',
   },
   surfaces: {
-    glass: 'border border-white/15 bg-white/10 backdrop-blur-xl',
-    paper: 'border border-black/10 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]',
-    quiet: 'border border-black/10 bg-black/[0.03]',
-    dark: 'border border-white/10 bg-black/30 shadow-[0_24px_70px_rgba(0,0,0,0.25)]',
+    glass: 'border border-white/14 bg-white/8 backdrop-blur-xl',
+    paper: 'border border-[var(--slot4-border)] bg-[var(--slot4-surface-bg)] shadow-[var(--slot4-shadow)]',
+    quiet: 'border border-[var(--slot4-border)] bg-white/65',
+    dark: 'border border-white/10 bg-[var(--slot4-dark-surface)] shadow-[var(--slot4-shadow-strong)]',
   },
   layout: {
     page: 'mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8',

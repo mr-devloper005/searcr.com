@@ -3,48 +3,50 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline || '',
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'Independent reading platform',
+    tagline: '',
     primaryLinks: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Collections', href: '/sbm' },
+      { label: 'Articles', href: '/article' },
+      { label: 'Images', href: '/image' },
+      { label: 'About', href: '/about' },
     ],
     actions: {
-      primary: { label: 'Start exploring', href: '/' },
-      secondary: { label: 'Submit', href: '/contact' },
+      primary: { label: 'Open Collections', href: '/sbm' },
+      secondary: { label: 'Contact', href: '/contact' },
     },
   },
   footer: {
-    tagline: 'Stories, resources, and discoverable posts',
-    description: 'A connected publishing surface for articles, visuals, listings, profiles, bookmarks, and downloadable resources.',
+    tagline: 'Refined discovery, arranged with care.',
+    description:
+      'Discover and organize the web’s most valuable finds in one place. Our social bookmarking platform lets users save, share, and explore articles, websites, resources, profiles, listings, and media through a clean, community-driven discovery experience.',
     columns: [
       {
-        title: 'Explore',
+        title: 'Browse',
         links: [
-          { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
-          { label: 'PDF Library', href: '/pdf' },
+          { label: 'Social bookmarks', href: '/sbm' },
+          { label: 'Articles', href: '/article' },
+          { label: 'Images', href: '/image' },
+          { label: 'PDF library', href: '/pdf' },
         ],
       },
       {
-        title: 'Site',
+        title: 'Visit',
         links: [
           { label: 'About', href: '/about' },
           { label: 'Contact', href: '/contact' },
+          { label: 'Search', href: '/search' },
         ],
       },
     ],
-    bottomNote: 'Built for clean discovery and connected publishing.',
+    bottomNote: 'Made for readers who like their discoveries well arranged.',
   },
   commonLabels: {
-    readMore: 'Read more',
+    readMore: 'Open page',
     viewAll: 'View all',
     explore: 'Explore',
     latest: 'Latest',
